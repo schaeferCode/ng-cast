@@ -6,6 +6,7 @@ angular.module('video-player').component('app', {
 function VideosController () {
   var $ctrl = this;
   $ctrl.videos = window.exampleVideoData;
+  $ctrl.video = window.exampleVideoData[0];
 }
 
 

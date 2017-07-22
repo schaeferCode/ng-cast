@@ -1,6 +1,15 @@
-angular.module('video-player')
+angular.module('video-player').component('videoPlayer', {
+  controller: videoPlayer,
 
-  .component('videoPlayer', {
-    // TODO
-    templateUrl: 'src/templates/videoPlayer.html'
-  });
+  bindings: {
+    video: '<'
+  },
+
+  templateUrl: 'src/templates/videoPlayer.html'
+});
+
+function videoPlayer ($scope) {
+  var $ctrl = this;
+
+  console.log('this is video player', this)
+}
